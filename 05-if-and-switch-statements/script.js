@@ -20,13 +20,12 @@ function oddEven(num) {
   }
 }
 console.log(oddEven(3));
-// result should be odd
-
 console.log(oddEven(-1));
-// result should be odd
-
 console.log(oddEven(10));
-// result should be even
+// ODER:
+//    function oddEven(num) {
+//      return num % 2 === 0 ? "even" : "odd";
+//    }
 
 // Task 03
 function oldYoung(age) {
@@ -41,13 +40,19 @@ function oldYoung(age) {
   }
 }
 console.log(oldYoung(27));
-// result should be young person
-
 console.log(oldYoung(6));
-// result should be children
-
 console.log(oldYoung(-1));
-// result should be invalid parameter
-
 console.log(oldYoung(86));
-// result should be elder person
+
+// ALTERNATIV:
+// function oldYoung(age) {
+//   if (typeof age !== "number" || age < 0) {
+//     return "invalid parameter";
+//   }
+
+//   if (age < 16) {
+//     return "young person";
+//   } else if (age < 50) {
+//     return "elder person";
+//   }
+// }
