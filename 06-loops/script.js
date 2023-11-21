@@ -1,4 +1,5 @@
 // TASK 01
+/*
 function oddNumbers(num1, num2) {
   let result = "";
 
@@ -16,18 +17,17 @@ function oddNumbers(num1, num2) {
 console.log(oddNumbers(0, 4));
 console.log(oddNumbers(10, 33));
 console.log(oddNumbers(9, 12));
-
+*/
 // TASK 02
 function charCount(word, char) {
-  word = word.toLowerCase();
-  char = char.toLowerCase();
+  if (char.length !== 1) {
+    return "wrong input";
+  }
+
   let result = "";
   for (let index = 0; index < word.length; index++) {
-    if (char > 1) {
-      break;
-    }
     const currentChar = word[index];
-    if (currentChar === char) {
+    if (currentChar.toLowerCase() === char.toLowerCase()) {
       result = result + char;
     }
   }
